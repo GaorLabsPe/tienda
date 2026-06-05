@@ -152,11 +152,24 @@ export default function App() {
               <PhoneCall className="w-3.5 h-3.5 text-teal-400" />
               <span>989 666 214</span>
             </a>
+
+            {/* Explorar demo en vivo header button */}
+            <button
+              onClick={() => {
+                setCurrentView("simulator");
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="hidden md:flex bg-gradient-to-r from-purple-600 via-indigo-600 to-teal-500 hover:from-teal-400 hover:to-indigo-500 text-white font-extrabold text-xs px-3.5 py-2.5 rounded-xl transition-all items-center gap-1.5 shadow-lg shadow-purple-950/20 border border-white/10 hover:border-white/30 cursor-pointer hover:scale-105 select-none whitespace-nowrap"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-teal-300 shrink-0 animation-pulse" />
+              <span>Explorar Demo</span>
+            </button>
+
             <a
               href="https://wa.me/51989666214?text=Hola%20GAORSYSTEM%20Per%C3%BA,%20deseo%20asesor%C3%ADa%20personalizada%20con%20el%2030%25%20de%20descuento%20de%20inicio%20de%20mes."
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:flex bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black text-xs px-4 py-2 rounded-xl transition-all items-center gap-1.5 shadow-lg shadow-emerald-500/15 cursor-pointer hover:scale-105"
+              className="hidden sm:flex bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black text-xs px-4 py-2.5 rounded-xl transition-all items-center gap-1.5 shadow-lg shadow-emerald-500/15 cursor-pointer hover:scale-105 whitespace-nowrap"
             >
               <span>Consultar Demo</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -205,10 +218,12 @@ export default function App() {
                   onClick={() => {
                     setMobileMenuOpen(false);
                     setCurrentView("simulator");
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className="px-4 py-2 bg-slate-900/50 hover:bg-purple-950/20 rounded-xl border border-slate-850 text-xs font-bold text-slate-200 hover:text-white transition-colors text-left"
+                  className="px-4 py-2.5 bg-gradient-to-r from-purple-950/70 to-indigo-950/70 hover:from-purple-900 hover:to-indigo-900 rounded-xl border border-purple-500/20 text-xs font-extrabold text-teal-300 hover:text-teal-200 transition-colors text-left flex items-center gap-2"
                 >
-                  🖥️ Simulador POS en Vivo
+                  <Sparkles className="w-3.5 h-3.5 text-teal-400 animate-pulse shrink-0" />
+                  <span>🖥️ Simulador POS en Vivo</span>
                 </button>
                 <a
                   href="#diferencia"
@@ -281,14 +296,12 @@ export default function App() {
                   className="transform hover:scale-[1.05] transition-transform duration-500 cursor-pointer" 
                 />
               </div>
-              <h1 className="text-[2.6rem] sm:text-5xl md:text-[4.5rem] leading-[0.85] sm:leading-[0.9] md:leading-[0.85] text-center font-caveat font-bold select-none text-white tracking-tight">
-                Un PdV{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00e2b7] to-[#4caccb]">
-                  hecho para
-                </span>{" "}
-                <span className="text-[#96bbf7]">ventas</span>
-                <br className="hidden sm:block" />{" "}
-                <span className="text-[#b282fb]">minoristas</span>
+              <h1 className="text-[2.5rem] sm:text-5xl md:text-[4.2rem] leading-[1.2] sm:leading-[1.25] md:leading-[1.25] text-center font-caveat font-bold select-none text-white tracking-tight py-1.5">
+                El <span className="text-[#00e2b7]">PDV más rápido y fácil</span>{" "}
+                creado para tu{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-[#96bbf7]">
+                  tienda o market
+                </span>.
               </h1>
 
               <p className="text-slate-200 text-sm sm:text-base md:text-lg font-sans leading-relaxed max-w-2xl mx-auto font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
@@ -378,12 +391,11 @@ export default function App() {
                     tienda en tu bolsillo!
                   </div>
 
-                  <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-wide leading-tight font-caveat">
-                    Lleva un{" "}
+                  <h2 className="text-[2.6rem] sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-wide leading-[1.2] sm:leading-[1.25] lg:leading-[1.25] font-caveat py-1.5">
+                    Lleva tu <span className="text-[#00e2b7]">tienda o negocio</span> a un{" "}
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-400">
-                      ERP Completo, Moderno y Seguro
-                    </span>{" "}
-                    para tu negocio.
+                      ERP Completo y Moderno.
+                    </span>
                   </h2>
 
                   <p className="text-slate-400 text-xs sm:text-sm md:text-base leading-normal max-w-lg font-sans">
@@ -499,8 +511,24 @@ export default function App() {
                   initial={{ opacity: 0, x: 40 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="lg:col-span-6 relative flex justify-center"
+                  className="lg:col-span-6 relative flex flex-col items-center gap-5 w-full justify-center"
                 >
+                  {/* Explorar demo en vivo button placed above the image card */}
+                  <motion.button
+                    whileHover={{ scale: 1.04 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => {
+                      setCurrentView("simulator");
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="relative px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 via-indigo-600 to-teal-500 hover:from-teal-400 hover:to-indigo-500 text-white font-extrabold text-xs sm:text-sm shadow-xl shadow-purple-950/50 border border-white/20 hover:border-white/40 cursor-pointer flex items-center gap-2 group overflow-hidden whitespace-nowrap"
+                  >
+                    <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-teal-400 via-purple-500 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <Sparkles className="w-4 h-4 text-teal-300 relative z-10 shrink-0 group-hover:rotate-12 transition-transform" />
+                    <span className="relative z-10 tracking-wider">⚡ EXPLORAR DEMO EN VIVO</span>
+                    <ArrowRight className="w-4 h-4 text-white relative z-10 shrink-0 group-hover:translate-x-1 transition-transform" />
+                  </motion.button>
+
                   <div className="relative group rounded-3xl overflow-hidden border border-purple-500/20 shadow-2xl shadow-purple-950/40 bg-slate-900 p-3 max-w-lg w-full">
                     <div className="absolute -top-12 -right-12 w-40 h-40 bg-teal-500/10 rounded-full blur-2xl pointer-events-none group-hover:bg-teal-500/15 transition-all" />
                     <div className="absolute -bottom-12 -left-12 w-40 h-40 bg-purple-500/15 rounded-full blur-2xl pointer-events-none group-hover:bg-purple-500/20 transition-all" />
@@ -538,7 +566,7 @@ export default function App() {
           {/* Lo Complejo vs Intuitivo Section */}
           <section className="py-12 sm:py-14 px-4 sm:px-6 lg:px-8 border-b border-purple-950/20 max-w-[1400px] mx-auto relative overflow-hidden">
             <div className="text-center max-w-4xl mx-auto space-y-5 mb-10 animate-fade-in">
-              <h2 className="text-4xl md:text-5xl lg:text-7xl font-caveat text-white flex items-center justify-center gap-2 sm:gap-4 flex-wrap">
+              <h2 className="text-5xl md:text-6xl lg:text-8xl font-caveat text-white flex items-center justify-center gap-2 sm:gap-4 flex-wrap">
                 <span>Convertimos procesos complejos</span>
                 <div className="bg-teal-400 rounded-full p-2 sm:p-3 shadow-[0_0_15px_rgba(45,212,191,0.4)] transform hover:scale-110 transition-transform hidden sm:block">
                   <ArrowRight className="w-5 h-5 sm:w-8 sm:h-8 text-slate-900 stroke-[3]" />
@@ -1003,7 +1031,7 @@ export default function App() {
                 <span className="text-teal-400 font-extrabold text-[10px] uppercase tracking-widest block font-mono">
                   Omnicanalidad Integrada
                 </span>
-                <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-wide leading-tight font-caveat">
+                <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white tracking-wide leading-tight font-caveat">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-teal-200">
                     El futuro está
                   </span>
@@ -1045,7 +1073,7 @@ export default function App() {
                 <span className="text-purple-400 font-extrabold text-[10px] uppercase tracking-widest block font-mono">
                   Prueba Interactiva del Punto de Venta
                 </span>
-                <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-wide font-caveat">
+                <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white tracking-wide font-caveat">
                   Diseño de Interfaz Intuitivo y Veloz
                 </h2>
                 <p className="text-slate-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
@@ -1090,7 +1118,7 @@ export default function App() {
                   <span className="text-teal-400 font-extrabold text-[10px] sm:text-xs uppercase tracking-widest block font-mono">
                     La Tranquilidad del Control Total
                   </span>
-                  <h3 className="text-3xl sm:text-4xl font-bold text-white tracking-wide font-caveat leading-tight">
+                  <h3 className="text-4xl sm:text-5xl font-bold text-white tracking-wide font-caveat leading-tight">
                     Tu Negocio bajo control de un solo vistazo
                   </h3>
                   <p className="text-slate-300 text-xs sm:text-sm max-w-xl leading-relaxed mx-auto lg:mx-0 font-sans">
@@ -1171,14 +1199,14 @@ export default function App() {
                   <span className="text-purple-400 font-extrabold text-[10px] sm:text-xs uppercase tracking-widest block font-mono">
                     Diferencia Real y Sencilla
                   </span>
-                  <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-wide leading-tight font-caveat">
+                  <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-wide leading-tight font-caveat">
                     ¿Por qué elegir GAORSYSTEM Perú en lugar de sistemas tradicionales?
                   </h2>
                   <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-sans pb-2">
                     La mayoría de sistemas o planificadores exigen costosas consultorías y complejas configuraciones de red. GAORSYSTEM está diseñado para funcionar al instante de forma totalmente amigable para el mercado peruano.
                   </p>
                   
-                  <h3 className="text-2xl sm:text-3xl font-bold text-teal-300 tracking-wide leading-tight font-caveat">
+                  <h3 className="text-3xl sm:text-4xl font-bold text-teal-300 tracking-wide leading-tight font-caveat">
                     La tranquilidad de tener todo bajo control
                   </h3>
                 </div>
@@ -1257,10 +1285,10 @@ export default function App() {
                     </div>
                     <div>
                       <h4 className="text-white font-extrabold text-xs tracking-wide uppercase font-sans">
-                        3. Soporte Local y Humano
+                        3. Soporte Humano
                       </h4>
                       <p className="text-slate-300 text-[11px] leading-relaxed font-sans mt-0.5">
-                        ¿Se trabó la impresora de tickets? Llámanos o escríbenos
+                        ¿Tienes alguna duda con el sistema? Llámanos o escríbenos
                         directamente por WhatsApp. Te proporcionamos ingenieros
                         locales peruanos dedicados que te rescatan al momento.
                       </p>
@@ -1289,7 +1317,7 @@ export default function App() {
           <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-8">
             <div className="text-center space-y-3">
               <HelpCircle className="w-8 h-8 text-purple-400 mx-auto animate-pulse" />
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-wide font-caveat">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-wide font-caveat">
                 Preguntas Frecuentes
               </h2>
               <p className="text-slate-400 text-xs sm:text-sm leading-normal max-w-md mx-auto">
@@ -1412,7 +1440,7 @@ export default function App() {
           <section className="bg-gradient-to-t from-purple-950/40 via-[#0b0314] to-[#0b0314] py-8 px-4 sm:px-6 lg:px-8 border-t border-purple-950/30 text-center">
             <div className="max-w-4xl mx-auto space-y-5">
               <GaorLogo size="sm" showSubtitle={false} className="mx-auto py-1" />
-              <h2 className="text-3xl sm:text-4xl font-bold text-white font-caveat tracking-wide leading-tight">
+              <h2 className="text-4xl sm:text-5xl font-bold text-white font-caveat tracking-wide leading-tight">
                 ¿Listo para modernizar los cobros e inventarios de tu tienda?
               </h2>
               <p className="text-slate-400 text-xs sm:text-sm max-w-lg mx-auto leading-relaxed">
@@ -1455,7 +1483,7 @@ export default function App() {
               <span className="text-teal-400 font-extrabold text-[11px] uppercase tracking-widest block font-mono">
                 Cotizar Online y Activa tu Promo
               </span>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-wide leading-tight font-caveat">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white tracking-wide leading-tight font-caveat">
                 Diseña tu Solución en Vivo & Descubre tu Expectativa
               </h1>
               <p className="text-slate-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed mt-4">
@@ -1475,7 +1503,7 @@ export default function App() {
               <span className="text-teal-400 font-extrabold text-[11px] uppercase tracking-widest block font-mono">
                 Prueba Interactiva del Punto de Venta
               </span>
-              <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-wide leading-tight font-caveat">
+              <h1 className="text-5xl sm:text-6xl font-bold text-white tracking-wide leading-tight font-caveat">
                 Simulador POS GAORSYSTEM
               </h1>
             </div>

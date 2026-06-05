@@ -538,12 +538,12 @@ export default function POSSimulator({
       <div className="bg-[#201d24] text-slate-200 px-4 py-2.5 flex items-center justify-between border-b border-[#16141a]">
         {/* Left branding crumbs */}
         <div className="flex items-center gap-2.5">
-          <div className="w-6 h-6 bg-[#714B67] rounded flex items-center justify-center shadow-inner">
-            <div className="w-2.5 h-2.5 border border-white rounded-full"></div>
+          <div className="w-6 h-6 bg-[#00e2b7] rounded flex items-center justify-center shadow-inner">
+            <div className="w-2.5 h-2.5 bg-slate-950 rounded-xs"></div>
           </div>
           <div className="flex items-center text-xs">
-            <span className="font-extrabold text-[#9e7694] tracking-wider uppercase">
-              Odoo<span className="text-white font-medium lowercase">19</span>
+            <span className="font-extrabold text-[#00e2b7] tracking-wider uppercase">
+              GAORSYSTEM
             </span>
             <span className="mx-2 text-slate-500 font-bold">/</span>
             <span className="text-slate-300 font-semibold truncate max-w-[140px] sm:max-w-none">
@@ -1133,12 +1133,12 @@ export default function POSSimulator({
               </button>
 
               <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
-                <div className="p-1.5 bg-purple-50 text-[#714B67] rounded-lg">
+                <div className="p-1.5 bg-teal-50 text-teal-600 rounded-lg">
                   <User className="w-5 h-5" />
                 </div>
                 <div>
                   <h4 className="font-extrabold text-xs text-slate-900 tracking-wide uppercase">
-                    Asignar Cliente Odoo
+                    Asignar Cliente GAORSYSTEM
                   </h4>
                   <p className="text-[10px] text-slate-400">
                     Emisión de boletas/facturas electrónicas en caja
@@ -1675,7 +1675,7 @@ export default function POSSimulator({
                   Imprimir Comprobante (Caja)
                 </button>
                 <a
-                  href={`https://wa.me/51989666214?text=Hola%20GAORSYSTEM%20Per%C3%BA,%20acabo%20de%20completar%20la%20prueba%20del%20simulador%20Odoo%2019%20y%20me%20pareci%C3%B3%20formidable.%20Quiero%20poner%20este%20Punto%20de%20Venta%20para%20mi%20negocio.%20Nombre:%20${encodeURIComponent(billingName)}`}
+                  href={`https://wa.me/51989666214?text=Hola%20GAORSYSTEM%20Per%C3%BA,%20acabo%2520de%2520completar%2520la%2520prueba%2520del%2520simulador%2520GAORSYSTEM%2520y%2520me%2520pareci%25C3%25B3%2520formidable.%2520Quiero%2520poner%2520este%2520Punto%2520de%2520Venta%2520para%2520mi%2520negocio.%2520Nombre:%2520${encodeURIComponent(billingName)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-2.5 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/15 cursor-pointer"
