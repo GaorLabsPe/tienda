@@ -47,6 +47,8 @@ import {
 import { motion, AnimatePresence } from "motion/react";
 // @ts-ignore
 import happyEntrepreneurImg from "./assets/images/happy_entrepreneur_1780669280659.png";
+// @ts-ignore
+import happyShopOwnerImg from "./assets/images/happy_shop_owner_1780597571252.png";
 import GaorLogo from "./components/GaorLogo";
 
 // FAQ data structure for collapsible accordion
@@ -505,7 +507,7 @@ export default function App() {
 
                     <div className="relative overflow-hidden rounded-2xl aspect-video w-full">
                       <img
-                        src="/src/assets/images/happy_shop_owner_1780597571252.png"
+                        src={happyShopOwnerImg}
                         alt="Emprendedora peruana feliz con el sistema"
                         className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 select-none pointer-events-none"
                         referrerPolicy="no-referrer"
