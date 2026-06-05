@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-odoo-purple: #714B67;
+  --color-odoo-purple-hover: #5a3c52;
+  --color-odoo-teal: #017e84;
+  --color-odoo-teal-hover: #016267;
+}
+
+/* Custom scrollbar utility */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #714B67;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5a3c52;
+}
+
+/* Custom glow utility */
+.glow-purple {
+  box-shadow: 0 0 25px 0 rgba(113, 75, 103, 0.15);
+}
+
+.glow-teal {
+  box-shadow: 0 0 25px 0 rgba(1, 126, 132, 0.15);
+}
+
+/* Custom selection */
+::selection {
+  background-color: #017e84;
+  color: white;
+}
+
