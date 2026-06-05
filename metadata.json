@@ -1,5 +1,5 @@
 {
-  "name": "GAORSYSTEM POS",
+  "name": "Sistema para tiendas MARKET",
   "description": "Landing page interactiva y profesional para el sistema punto de venta y ERP de GAORSYSTEM Perú.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
