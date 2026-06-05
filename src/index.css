@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-caveat: "Caveat", cursive;
   
   --color-odoo-purple: #714B67;
   --color-odoo-purple-hover: #5a3c52;
@@ -30,7 +32,16 @@
   background: #5a3c52;
 }
 
-/* Custom glow utility */
+/* Theme light inversion */
+.theme-light {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.theme-light img,
+.theme-light video,
+.theme-light .no-invert {
+  filter: invert(1) hue-rotate(180deg);
+}
 .glow-purple {
   box-shadow: 0 0 25px 0 rgba(113, 75, 103, 0.15);
 }
